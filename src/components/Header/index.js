@@ -5,7 +5,7 @@ import './style.css';
 
 export default function Header() {
     return (
-        <div className="heading">
+        <div data-testid="header-1" className="heading">
             <Row>
                 <h1 className="title">Air Quality in the US</h1>
             </Row>
