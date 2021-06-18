@@ -7,7 +7,7 @@ An application that uses OpenAQ API to create two groups of data based on air qu
 
 ## Screenshots
 
-![Screenshots](./images/Screenshot.png)
+![Screenshots](./src/images/Screenshot.png)
 
 ## Table of Contents
 
