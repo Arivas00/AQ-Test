@@ -9,9 +9,6 @@ export default function Header() {
             <Row>
                 <h1 className="title">Air Quality in the US</h1>
             </Row>
-            <Row>
-                <p>Below you will find air quality of locations greater than or equal to 5 µg/m³</p>
-            </Row>
         </div>
 
     )
