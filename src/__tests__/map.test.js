@@ -3,11 +3,11 @@ import { render, screen, cleanup } from '@testing-library/react';
 import Map from '../components/Map';
 
 
-jest.mock("./map", () => {
+jest.mock("../components/Map", () => {
     return function DummyMap(props) {
         return (
             <div data-testid="map-1">
-                {props.center.lat}:{props.center.long}
+                {props.center}:{props.center}
             </div>
         );
     };
