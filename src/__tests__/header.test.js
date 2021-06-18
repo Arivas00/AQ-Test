@@ -1,5 +1,5 @@
-import { render, screen, cleanup } from '@testing-library/react'
-import Header from '../components/Header'
+import { render, screen, cleanup } from '@testing-library/react';
+import Header from '../components/Header';
 
 
 test('should render header component', () => {

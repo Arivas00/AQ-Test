@@ -24,7 +24,7 @@ const Map = ({ eventData, center, zoom}) => {
     })
 
     return (
-        <div className="map">
+        <div className="map" data-testid="map-1">
             {locationInfoData && <LocationInfo info={locationInfoData} />}
             <GoogleMapReact 
                 bootstrapURLKeys={{ key: 'AIzaSyA28pB-AOOJJyIJltg74mura6CBk4h2Uc8' }}
