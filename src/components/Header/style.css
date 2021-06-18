@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap");
+
+.heading {
+    background-color: rgb(0, 168, 50);
+    padding: 10px;
+}
+
+.title {
+    text-align: center;
+    padding: 5px;
+    font-family: 'Comfortaa';
+    color: white;
+}
+
+p {
+    text-align: center;
+    padding: 5px;
+    font-family: 'Comfortaa';
+    color: white;
+}
