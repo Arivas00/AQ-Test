@@ -9,14 +9,14 @@ const Map = ({ eventData, center, zoom}) => {
 
     const [locationInfoData, setLocationInfoData] = useState(null)
 
-    const markers = eventData.map(ev => {
+    const markers = eventData && eventData.map(ev => {
         if(ev.value >= 5) {
             return <LocationMarker lat={ev.coordinates.latitude} lng={ev.coordinates.longitude} onClick={() => setLocationInfoData({ location: ev.location })} />
         }
         return null
     })
 
-    const markers2 = eventData.map(ev => {
+    const markers2 = eventData && eventData.map(ev => {
         if(ev.value <= 5) {
             return <LocationMarker2 lat={ev.coordinates.latitude} lng={ev.coordinates.longitude} onClick={() => setLocationInfoData({ location: ev.location })} />
         }

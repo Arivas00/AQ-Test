@@ -13,16 +13,21 @@ function App() {
     const fetchEvents = async () => {
       const apiURL = 'https://u50g7n0cbj.execute-api.us-east-1.amazonaws.com/v2/measurements?limit=100&page=1&offset=0&sort=desc&unit=%C2%B5g%2Fm%C2%B3&radius=1000&country_id=US&order_by=city&entity=community'
 
-      try{setLoading(true)
-      const res = await fetch(apiURL)
-      const aqData = await res.json()
+      try {
+        setLoading(true)
+        const res = await fetch(apiURL)
 
-      setEventData(aqData.results)
-      setLoading(false)
-    }
-    catch(err) {
-      console.log("Type Error: ", err )
-    }
+        if (res) {
+          const aqData = await res.json()
+
+          setEventData(aqData.results)
+          setLoading(false)
+        }
+
+      }
+      catch (err) {
+        console.log("Type Error: ", err)
+      }
     }
 
     fetchEvents()
@@ -32,7 +37,7 @@ function App() {
     <div>
       <Header />
       <Legend />
-      { !loading ? <Map eventData={eventData} /> : <Loader /> }
+      {!loading ? <Map eventData={eventData} /> : <Loader />}
     </div>
   );
 }
